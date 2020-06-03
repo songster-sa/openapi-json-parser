@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <groupId>com.sample</groupId>
+    <artifactId>openapi-json-parser</artifactId>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
+
+    <name>OpenAPI Json Parser- Webapp</name>
+    <description>OpenAPI Json Parser- Webapp</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.10</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.30</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>OpenAPIJsonParserApp</finalName>
+        <resources>
+            <resource>
+                <filtering>false</filtering>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <filtering>false</filtering>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**</include>
+                </includes>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+        </resources>
+
+        <testResources>
+            <testResource>
+                <filtering>false</filtering>
+                <directory>src/test/resources</directory>
+            </testResource>
+            <testResource>
+                <filtering>false</filtering>
+                <directory>src/test/java</directory>
+                <includes>
+                    <include>**</include>
+                </includes>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </testResource>
+        </testResources>
+    </build>
+</project>
+
